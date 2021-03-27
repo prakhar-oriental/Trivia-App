@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Trivia</string>
+    <string name="title">Trivia</string>
+    <string name="titleone">Trivia</string>
+    <string name="triviaP">Trivia</string>
+    <string name="trueone">True</string>
+    <string name="truetwo">True</string>
+    <string name="falseone">False</string>
+    <string name="_0_to_100p">0 to 100</string>
+    <string name="next_button">next_button</string>
+    <string name="prev_button">prev_button</string>
+    <string name="textview">TextView</string>
+    <string name="trivia">Trivia</string>
+    <string name="_0_to_100">0 to 100</string>
+    <string name="todop">TODO</string>
+    <string name="truep">True</string>
+    <string name="true_x">true</string>
+    <string name="false_y">false</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="hi_there_you_will_se_the_next_thing_to_br_happen">Hi there you will se the next thing to br happen</string>
+    <string name="correct_answer">Correct!</string>
+    <string name="wrong_answer">Incorrect</string>
+</resources>
