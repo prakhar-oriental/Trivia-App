@@ -21,4 +21,7 @@
     <string name="hi_there_you_will_se_the_next_thing_to_br_happen">Hi there you will se the next thing to br happen</string>
     <string name="correct_answer">Correct!</string>
     <string name="wrong_answer">Incorrect</string>
+    <string name="_0">0</string>
+    <string name="_0i">0</string>
+    <string name="current_score_0">current score:0</string>
 </resources>
