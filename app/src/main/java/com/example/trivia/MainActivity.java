@@ -3,6 +3,7 @@ package com.example.trivia;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private   ImageButton prevButton;
     private   ImageButton nextButton;
     private   TextView scoreView;
+    private   Button shareButton;
     private   int currentQuestionIndex = 0;
     private  List<Question> questionList;
     private int scoreCounter = 0;
@@ -49,8 +51,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         questionCounterTextView = findViewById(R.id.counterView);
         questionTextView = findViewById(R.id.questionTextView);
         trueButton = findViewById(R.id.trueButton);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    falseButton = findViewById(R.id.falseButton);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    prevButton = findViewById(R.id.prevButton);
+         shareButton = findViewById(R.id.shareButton);                                                                                                                                                                                                                                                                                                                                                                                                                                                           falseButton = findViewById(R.id.falseButton);
+         shareButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(Intent.ACTION_SEND);
+                 intent.setType("text/plain");
+                 intent.putExtra(Intent.EXTRA_TEXT,"My High_Score in Trivia Game:"+prefs.getHighScore());
+
+                 startActivity(intent);
+             }
+         });                                                                                                                                                                                                                                                                                                                                                                                                                                                           prevButton = findViewById(R.id.prevButton);
         nextButton = findViewById(R.id.nextButton);
         score = new Score();
 
@@ -129,14 +140,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             score.setScore(scoreCounter);
             Log.d("score", String.valueOf(score.getScore()));
             scoreView.setText(MessageFormat.format("Current Score: {0}", String.valueOf(score.getScore())));
-goNext();
+     //goNext();
         }else
         {
             scoreCounter = 0;
             score.setScore(scoreCounter);
             Log.d("score", String.valueOf(score.getScore()));
             scoreView.setText(MessageFormat.format("Current Score: {0}", String.valueOf(score.getScore())));
-            goNext();
+         //   goNext();
         }
 
     }
@@ -146,7 +157,7 @@ goNext();
         score.setScore(scoreCounter);
         Log.d("score", String.valueOf(score.getScore()));
         scoreView.setText(MessageFormat.format("Current Score: {0}", String.valueOf(score.getScore())));
-        goNext();
+       // goNext();
     }
 
     private void updateQuestion() {

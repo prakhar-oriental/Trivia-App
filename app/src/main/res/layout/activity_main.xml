@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/design_default_color_secondary"
+    android:backgroundTint="@color/teal_200"
     tools:context=".MainActivity">
 
     <TextView
@@ -131,6 +132,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/scoreText"
         app:layout_constraintTop_toBottomOf="@+id/counterView" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/share_hs"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_200"
+        android:textColorHint="@color/purple_200"
+        android:textColorLink="@color/purple_200"
+        app:layout_constraintStart_toEndOf="@+id/triviaView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
